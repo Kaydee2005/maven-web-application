@@ -60,6 +60,5 @@ Build status
 Landmark Technologies''', recipientProviders: [developers(), contributor()], subject: 'build status', to: 'developers'
 
     }
-  }
-  
+  } 
 }
