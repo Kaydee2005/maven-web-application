@@ -39,7 +39,7 @@ pipeline{
         deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://54.166.85.32:8177/')], contextPath: null, war: 'target/*war'
         sh "echo deployment to production completed successfully"
       }       
-    }*/
+    }
   post{
     failure{
          emailext body: '''Hi Team,
@@ -59,6 +59,6 @@ Build status
 Landmark Technologies''', recipientProviders: [developers(), contributor()], subject: 'build status', to: 'developers'
 
     }
-  } 
+  }*/ 
 }
 }
